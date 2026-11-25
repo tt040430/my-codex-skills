@@ -1,0 +1,13 @@
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.tmp
+*.bak
+.env
+.env.*
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc

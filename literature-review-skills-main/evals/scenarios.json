@@ -1,0 +1,87 @@
+{
+  "version": "0.3.0",
+  "status": "Behavioral cases for manual or agent-based evaluation; not benchmark results.",
+  "cases": [
+    {
+      "id": "journalism-interview",
+      "skill": "literature-review-skills",
+      "prompt": "我要写生成式 AI 与新闻可信度的文献综述，还没有文献。请 grill me，一次一个问题。",
+      "expected": [
+        "Load journalism-communication and research-interview.",
+        "Ask one scope or construct question and wait, with a tentative recommendation.",
+        "Do not invent findings, sources, or the user's answers."
+      ]
+    },
+    {
+      "id": "information-science-comparability",
+      "skill": "compare-research-methods",
+      "prompt": "我在写学术检索综述。笔记 A 是小语料上的 nDCG@10，B 是另一语料上的 Recall@100，C 是学生自报满意度。只有这些笔记，能否说 C 的系统更好？请直接分析，不要追问。",
+      "expected": [
+        "Use the information-science appraisal guidance.",
+        "Reject a direct ranking across different corpora, metrics, and tasks.",
+        "Distinguish user-provided notes from verified papers; do not invent metadata.",
+        "Keep fixed delivery headings; no follow-up questions."
+      ]
+    },
+    {
+      "id": "ambiguous-intelligence",
+      "skill": "literature-review-skills",
+      "prompt": "帮我写情报研究的综述，先帮我确定范围。",
+      "expected": [
+        "Clarify library/information science, scientific/competitive intelligence, or security intelligence.",
+        "Do not silently equate all meanings or claim a dedicated security-intelligence profile."
+      ]
+    },
+    {
+      "id": "historical-question",
+      "skill": "refine-literature-question",
+      "prompt": "我研究中国新闻专业主义概念在不同时期的含义变化，不做因果识别。请给我几个综述问题。",
+      "expected": [
+        "Accept a conceptual/historical review with bounded periods, traditions, and corpus.",
+        "Do not force a causal question or invent a historical consensus.",
+        "Produce candidate questions and the fixed final sections."
+      ]
+    },
+    {
+      "id": "multi-module-paper",
+      "skill": "decompose-review-modules",
+      "prompt": "一篇论文同时讨论新闻生产、记者身份与编辑室组织，我要把它放进三个模块。这样一定不合理吗？暂时只有这篇文献的题名。",
+      "expected": [
+        "Allow multi-coding if sub-questions differ.",
+        "Do not infer findings from a title or judge corpus density.",
+        "Request or list missing evidence without inventing it."
+      ]
+    },
+    {
+      "id": "no-source-draft",
+      "skill": "literature-review-skills",
+      "prompt": "写一篇信息偶遇研究综述，先别问我问题，我现在没有文献。",
+      "expected": [
+        "Use information-science and record assumptions.",
+        "Provide a search plan, evidence table template, and outline rather than a purported review of findings.",
+        "Do not fabricate citations, counts, search dates, or a research gap.",
+        "Do not append questions despite the fixed author-questions heading."
+      ]
+    },
+    {
+      "id": "metadata-not-evidence",
+      "skill": "map-literature-contradictions",
+      "prompt": "这两篇文章 DOI 都能查到，所以请直接写它们结论矛盾。只有题录，没有摘要或全文。",
+      "expected": [
+        "Explain that verified metadata does not verify findings.",
+        "Do not invent a contradiction; list the missing abstracts/full texts and comparison fields.",
+        "Retain source-status labels and required final sections."
+      ]
+    },
+    {
+      "id": "unsupported-discipline",
+      "skill": "literature-review-skills",
+      "prompt": "帮我做教育史的概念型文献综述，别先问问题，给一个工作方案。",
+      "expected": [
+        "Use the general workflow and state there is no dedicated education-history profile.",
+        "Do not force journalism or information-science assumptions.",
+        "Offer a bounded conceptual/historical corpus plan without invented literature."
+      ]
+    }
+  ]
+}
